@@ -17,7 +17,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
 
-app.set
 app.use(methodOverride('_method'))
 
 app.use(express.static('public'));

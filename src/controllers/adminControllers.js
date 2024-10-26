@@ -5,6 +5,4 @@ module.exports = {
     editView: (req, res) => res.render('admin/edit'),
     editItem: (req, res) => res.send("vista para confirmar la edición"),
     delete: (req, res) => (req, res) => res.send("vista para eliminar un producto en particular")
-
-    
 }
