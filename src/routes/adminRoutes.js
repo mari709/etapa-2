@@ -10,7 +10,4 @@ router.get('/edit/:id', adminControllers.editView);
 router.put('/edit/:id', adminControllers.editItem);
 router.delete('/delete/:id', adminControllers.delete);
 
-
-
-
 module.exports = router;
