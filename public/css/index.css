@@ -1,0 +1,89 @@
+:root {
+    --color-primary: #c64c5e; 
+    --color-light-text: #ffffff; 
+    --color-dark-text: #111010; 
+    --color-hover: #555;
+    --color-accent: #ff6f61;
+    --color-background: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilos del header */
+.page-header {
+    color: var(--color-light-text);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.navbar__logo img {
+    width: 50px; 
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar__item {
+    position: relative;
+    margin: 0 1rem;
+}
+
+.navbar__link {
+    color: var(--color-light-text);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__cart img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Submenú */
+.with-submenu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    z-index: 10;
+}
+
+.with-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu__item {
+    padding: 0.5rem 1rem;
+}
+
+.submenu__link {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.submenu__link:hover {
+    background-color: #555;
+}

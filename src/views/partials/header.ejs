@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title  %> | Tienda de muebles </title>
+    <link rel="stylesheet" href="/css/index.css">
+    <title><%= title  %> | Mueblelandia </title>
 </head>
+
 <body>
-<header>
-    <!-- barra de navegacion -->
+    <header class="page-header">
+    <nav class="navbar container">
+        <picture class="nabvar__logo">
+            <a href="/">
+                <img src="/img/branding/mueblelandia.png" alt="Imagotipo Mueblelandia">
+            </a>
+        </picture>
+        <ul class="navbar__menu">
+            <li class="navbar__item with-submenu">
+                <a class="navbar__link with-icon" href="/shop">Productos<iconify-icon
+                        icon="tabler:chevron-down" style="color: white;"></iconify-icon></a>
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="/shop?filter=Living" class="submenu__link">Living</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="/shop?filter=Cocina" class="submenu__link">Cocina</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="/shop?filter=Dormitorio" class="submenu__link">Dormitorio</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar__item">
+                <a class="navbar__cart" href="/shop/cart">
+                    <img src=" /img/icons/cart-icon.svg" alt="ícono de carrito">
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
