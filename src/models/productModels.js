@@ -3,11 +3,8 @@ const { conn } = require('../config/conn');
 //obtener todos los productos
 const getAll = async () => {
     try {
-        const [rows] = await conn.query(`
-            SELECT product.*, category.category_name 
-            FROM product 
-            LEFT JOIN category ON product.category_id = category.category_id
-        `);
+        const [rows] = await conn.query
+        ('SELECT * FROM product; ');
         return rows;
         
     } catch (error) {
