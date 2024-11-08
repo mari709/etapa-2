@@ -1,11 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    hola soy la pagina de shop
+<%- include('../partials/header') %>
+
+    <ul class="shop__items">
+        <% data.forEach( item => { %>
+            <li class="shop__item">
+                <article class="card-item">
+                    <a class="card-item__link" href="/shop/item/<%= item.product_id %>">
+                        <picture class="card-item__cover">
+                            <img class="card-item__img" src="/img/<%= item.img_product %> "
+                                alt="<%= item.product_description %>">
+                        </picture>
+                        <div class="card-item__content">
+                            <h4 class="card-item__name">
+                                <%= item.product_name%>
+                            </h4>
+                            <p class="card-item__price">$ <%= item.price %>.-</p>
+                            </p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+            <% }) %>
+    </ul>
+    <%- include('../partials/footer') %>
+
 </body>
 </html>

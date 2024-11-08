@@ -1,7 +1,17 @@
-module.exports = {
-    shop: (req, res) => {
-        res.render('shop/shop');
+const { getAll } = require('../models/productModels');
 
+
+module.exports = {
+    shop: async (req, res) => {
+
+        const data = await getAll();
+       
+        res.render('shop/shop', {
+            title: 'Productos',
+            data
+        });
+        
+        console.log(data);
     },
 
     item: (req, res) => {
