@@ -45,7 +45,6 @@
 }
 
 .navbar__link {
-    color: var(--color-light-text);
     text-decoration: none;
     font-weight: bold;
     display: flex;
@@ -86,4 +85,226 @@
 
 .submenu__link:hover {
     background-color: #555;
+}
+
+
+/*shop*/
+/* Contenedor principal de los elementos */
+.shop__items {
+    display: grid;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+}
+
+/* Grid layout para 2 columnas en móviles y 3 en escritorio */
+@media (max-width: 767px) {
+    .shop__items {
+        grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Limita el ancho de las tarjetas */
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .shop__items {
+        grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Ajusta el ancho para escritorio */
+        justify-content: space-around; /* Distribuye espacio entre las tarjetas */
+    }
+}
+
+/* Cada item de la lista */
+.shop__item {
+    transition: transform 0.3s ease;
+}
+
+.shop__item:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos de la tarjeta */
+.card-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+.card-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Enlace dentro de la tarjeta */
+.card-item__link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Imagen de portada */
+.card-item__cover {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+}
+
+.card-item__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-item__cover:hover .card-item__img {
+    transform: scale(1.1);
+}
+
+
+/* Contenido de la tarjeta */
+.card-item__content {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Nombre del producto */
+.card-item__name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #333333;
+}
+
+/* Precio */
+.card-item__price {
+    font-size: 16px;
+    color: #ff6b6b;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/*vista de item*/
+/* General Styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Main Item Section */
+.item {
+    display: flex;
+    gap: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image */
+.card-item__img--front {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Product Information */
+.item__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Product Name */
+.item__name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Product Description */
+.item__description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Product Price */
+.item__price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Add to Cart Form */
+.item__cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Quantity Buttons */
+.item__quantity {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.item__quantity:hover {
+    background-color: #bbb;
+}
+
+/* Quantity Input */
+.item__input {
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Submit Button */
+.item__submit {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.item__submit:hover {
+    background-color: #2980b9;
+}
+
+/* Additional Utility Classes */
+.btn--primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn--medium {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
 }
