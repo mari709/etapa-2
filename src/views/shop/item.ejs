@@ -1,11 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    pagina de item
+<%- include('../partials/header') %>    
+    <main class="container">
+        <section class="item">
+                <img class="card-item__img--front" src="/<%= item.img_product %>"
+                    alt="<%= item.product_description %>">
+            <article class="item__info">
+                <h3 class="item__name"><%= item.product_name %></h3>
+                <p class="item__description"><%= item.product_description %></p>
+                <p class="item__price">$ <%= item.price %></p>
+                <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+                    <button id="subtract" class="item__quantity" type="button">-</button>
+                    <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0">
+                    <button id="add" class="item__quantity" type="button">+</button>
+                    <button class="item__submit btn btn--primary btn--medium" type="submit">Agregar al carrito</button>
+                </form>
+            </article>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>    
 </body>
+
 </html>
