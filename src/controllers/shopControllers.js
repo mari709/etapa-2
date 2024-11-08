@@ -1,4 +1,5 @@
 const { getAll } = require('../models/productModels');
+const { getOne } = require('../models/productModels');
 
 
 module.exports = {
@@ -14,8 +15,18 @@ module.exports = {
         console.log(data);
     },
 
-    item: (req, res) => {
-        res.render('shop/item');
+    item: async (req, res) => {
+
+        const itemId = req.params.id;
+        const [item] = await getOne(itemId);
+
+        res.render('shop/item', {
+            title: 'Item',
+            item
+        });
+
+        console.log(item);
+
     },
 
     addItem: (req, res) => res.send("esta es la ruta para agregar un item al carrito"),
