@@ -3,8 +3,8 @@ const mysql = require('mysql2');
 const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    password: 'password',
-    database: 'mueblelandia',
+    password: '',//colocar contraseña
+    database: 'tienda_schema', //colocar nombre de base de datos
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit:0
